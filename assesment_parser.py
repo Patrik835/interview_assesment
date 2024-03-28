@@ -52,8 +52,19 @@ def parse_xs_duration_format(duration_str):
     except Exception as e:
         print(f"There was an error: {e}")
         return None
-
     if negative:
         return -total_seconds
     else:
         return total_seconds
+    
+#pseudo code
+# "P0Y0M0DT0H3M30.000S"
+# string.split('T')
+# l = ["P0Y0M0D", "0H3M30.000S"]
+# l[0].split(Y)
+# l[0].split(M)
+# l[0].split(D)
+
+# l[1].split(h)
+# l[1].split(h)
+# l[1].split(s)
